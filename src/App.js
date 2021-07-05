@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import RecipesList from "./Components/RecipesList";
+import AppNavbar from "./Components/AppNavbar";
+import HomePage from "./Components/HomePage";
+import Clicker from "./Components/Clicker";
+import RecipeEdit from "./Components/RecipeEdit";
 
-function App() {
+const App=() =>{
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+
+        <Switch>
+            <>
+            <AppNavbar/>
+          <Route path='/clicker' exact={true} component={Clicker}/>
+            <Route path='/'  component={HomePage}/>
+          <Route path='/recipes' component={RecipesList}/>
+                <Route path='/recipes/:id' component={RecipeEdit}/>
+            </>
+        </Switch>
+      </Router>
   );
 }
 
