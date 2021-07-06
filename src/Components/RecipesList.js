@@ -52,6 +52,7 @@ const RecipesList=()=>{
                         <th width="15%">Image</th>
                         <th width="30%">Name</th>
                         <th width="30%">Description</th>
+                        <th width="30%">Edit/Delete</th>
                     </tr>
                     </thead>
                     <tbody>
