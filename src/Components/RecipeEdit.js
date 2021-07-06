@@ -52,7 +52,7 @@ class RecipeEdit extends Component {
     }
     render() {
         const {item} = this.state;
-        const title = <h2>{item.id ? 'Edit Client' : 'Add Client'}</h2>;
+        const title = <h2>{item.id ? 'Edit Recipe' : 'Add Recipe'}</h2>;
 
         return <div>
             <Container>
